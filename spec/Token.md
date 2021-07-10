@@ -47,6 +47,8 @@
 ## 8.str 字符串
     规则：
         str
+        ""单行字符串常量
+        ''' '''多行字符串常量
     说明：
         关键字
 
@@ -55,3 +57,31 @@
         bool
     说明：
         关键字
+
+## 10 浮点字面值
+    规则:
+        Digit+ . Digit+ [decimal_exponent]
+                Digit 如下:
+                    0 1 2 3 4 5 6 7 8 9
+                decimal_exponent 如下:
+                    e | E [exponent_sign] Digit+
+                exponent_sign 如下:
+                    +|-
+
+## 11 整数字面值
+    规则:
+        decimal_literal :
+            NoneZeroDigit Digit*
+        hex_literal :
+            0x|0X HexDigit+
+        binary_literal
+            0b|0B BinDigit+
+        
+        NoneZeroDigit 如下:
+            1, 2, 3, 4, 5, 6, 7, 8, 9
+        Digit 如下:
+            0 1 2 3 4 5 6 7 8 9
+        HexDigit 如下:
+            0, 1, 2, 3, 4, 5, 6, 7, 8, 9, a, A, b, B, c, C, d, D, e, E, f, F
+        BinDigit 如下:
+            0 1
