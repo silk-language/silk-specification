@@ -115,7 +115,7 @@
     
 ## 标准库
     * memory type
-    data type
+    [data type]
         start:address
         len:uint32
         alignment:uint16
