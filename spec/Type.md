@@ -18,8 +18,8 @@
     * or
     
     * not
-    
-
+   
+                        
 #类型描述符
     用于类型描述列表，是一类特殊函数，输入为类型，输出为bool
     内建：
@@ -33,6 +33,8 @@
                           return hasattr(A,"xx")
                         }
 ##关键字
+    * enum 
+        定义枚举类型
     
 ## 0、特殊类型
     
@@ -46,6 +48,9 @@
         * data type
             [inheritable,]
             can only contain base type and data type
+            
+        * enum type
+            枚举类型
             
         * traits type
             [inheritable,]
@@ -95,9 +100,33 @@
             four byte unicode codepoint
             [0,2^32-1]
     
-    * byte
-    8 bit value
-    [0,2^8-1]
+        * byte
+        8 bit value
+        [0,2^8-1]
+        
+        * 定长数组类型
+        
+        * 变长数组类型
+        
+        * memory type
+            [data type]
+            start:address
+            only support index
+            len:uint32
+            alignment:uint16
+            flags:uint32
+            
+        * 二阶类型
+            * pointer<T> pointer to T
+                    address:address_type
+                    only support index
+                    ptr<int> a=new int;
+                    ptr
+            
+
+## 二、内建函数
+    * malloc(n,align,flags) create a consequence n byte memory object with flags=flags,align =align
+                    
 
 ## 二、复合类型
     复合类型是指由基础类型进行组合而得到的类型，其取值范围是其所组合类型的取值范围的笛卡尔积
@@ -114,15 +143,4 @@
             
     
 ## 标准库
-    * memory type
-    [data type]
-        start:address
-        len:uint32
-        alignment:uint16
-        flags:uint32
     
-    * ptr<T> pointer to T
-        address:address_type
-        only support index
-        ptr<int> a=new int;
-        ptr
