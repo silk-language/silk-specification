@@ -105,8 +105,8 @@
         [0,2^8-1]
         
         * 定长数组类型
-        
-        * 变长数组类型
+            array<T,n>
+            持有memory类型
         
         * memory type
             [data type]
