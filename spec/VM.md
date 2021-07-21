@@ -33,6 +33,7 @@
     * addui64
     * addf32
     * addf64
+    * syscall
     
     
     
