@@ -18,7 +18,12 @@
     * or
     
     * not
-   
+  
+#tag关键字
+    hastag
+    
+#setattr getattr
+    object类型
                         
 #类型描述符
     用于类型描述列表，是一类特殊函数，输入为类型，输出为bool
@@ -45,7 +50,7 @@
         * object type
             [inheritable,]
             
-        * data type
+        * struct type
             [inheritable,]
             can only contain base type and data type
             
@@ -55,9 +60,6 @@
         * traits type
             [inheritable,]
                 interface
-                
-        * type type
-                for every type,its type is type
     
     nonsizeable type:
         * nothing type
