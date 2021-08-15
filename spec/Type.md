@@ -19,9 +19,6 @@
     
     * not
   
-#tag关键字
-    hastag
-    
 #setattr getattr
     object类型
                         

@@ -47,6 +47,7 @@
 ## 8.str 字符串
     规则：
         str
+        R|r 可选前缀，raw string
         ""单行字符串常量
         ''' '''多行字符串常量
     说明：
@@ -71,11 +72,11 @@
 ## 11 整数字面值
     规则:
         decimal_literal :
-            NoneZeroDigit Digit*
+            NoneZeroDigit Digit* [suffix]
         hex_literal :
-            0x|0X HexDigit+
+            0x|0X HexDigit+ [suffix]
         binary_literal
-            0b|0B BinDigit+
+            0b|0B BinDigit+ [suffix]
         
         NoneZeroDigit 如下:
             1, 2, 3, 4, 5, 6, 7, 8, 9
@@ -85,6 +86,9 @@
             0, 1, 2, 3, 4, 5, 6, 7, 8, 9, a, A, b, B, c, C, d, D, e, E, f, F
         BinDigit 如下:
             0 1
+        suffix:
+            i[8,16,32,64]
+            ui[8,16,32,64]
 
 ## 12 转义序列
     规则:
