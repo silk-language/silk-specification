@@ -80,11 +80,11 @@
             copyable memory object
             [-2^63,2^63-1]
         
-        * float
+        * float32
             copyable memory object
             IEEE 754 32bit float
         
-        * double
+        * float64
             copyable memory object
             IEEE 754 64bit float
         

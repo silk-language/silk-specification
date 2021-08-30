@@ -61,22 +61,26 @@
 
 ## 10 浮点字面值
     规则:
-        Digit+ . Digit+ [decimal_exponent]
+        Digit+ . Digit+ [decimal_exponent] [float-suffix]
                 Digit 如下:
                     0 1 2 3 4 5 6 7 8 9
                 decimal_exponent 如下:
                     e | E [exponent_sign] Digit+
                 exponent_sign 如下:
                     +|-
+                float-suffix:
+                    f32,f64
 
 ## 11 整数字面值
     规则:
         decimal_literal :
-            NoneZeroDigit Digit* [suffix]
+            NoneZeroDigit Digit* [interger-suffix]
         hex_literal :
-            0x|0X HexDigit+ [suffix]
+            0x|0X HexDigit+ [interger-suffix]
+        oct_literal :
+            0e|0E OctDigit+ [interger-suffix]
         binary_literal
-            0b|0B BinDigit+ [suffix]
+            0b|0B BinDigit+ [interger-suffix]
         
         NoneZeroDigit 如下:
             1, 2, 3, 4, 5, 6, 7, 8, 9
@@ -86,9 +90,9 @@
             0, 1, 2, 3, 4, 5, 6, 7, 8, 9, a, A, b, B, c, C, d, D, e, E, f, F
         BinDigit 如下:
             0 1
-        suffix:
+        interger-suffix:
             i[8,16,32,64]
-            ui[8,16,32,64]
+            u[8,16,32,64]
 
 ## 12 转义序列
     规则:
