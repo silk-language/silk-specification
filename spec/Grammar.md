@@ -29,12 +29,31 @@ class C(object)
     
 }
 
+decorator hook
+descriptor metadata
+validator validate
+validator odd_validate(int x)
+{
+    if(x%2==0)
+    {
+        return true;
+    }
+    
+    return false;
+}
+
 @decorator1
 @decorator2
 [tag1,tag2,tag...N]
-func print([NonNegative,Odd] int x,[NonNull,lambda s:MaxLen(s,7)] str y)->[Even,Negative]int
+func print(int x[NonNegative,Odd], str y [NonNull,lambda s:MaxLen(s,7)])->int[Even,Negative]
 {
     @line_decorator
-    int i=1,j=10;
+    {
+        int i=1,j=10;
+        int v[odd_validator]=get_odd();
+        (i,j)[odd_validator];
+        
+    }
+    
     
 }
